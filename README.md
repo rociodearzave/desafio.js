@@ -5,7 +5,7 @@ let cantidadDeArticulosJug2 = 0;
 let ganador = "";
 
 const jugadorUno = {
-  nombre: "Marce",
+  nombre: "Nestor",
   habilidades: {
     ataque: 20,
     velocidad: 80,
@@ -16,7 +16,7 @@ const jugadorUno = {
 };
 
 const jugadorDos = {
-  nombre: "Flor",
+  nombre: "Rocio",
   habilidades: {
     ataque: 20,
     velocidad: 100,
@@ -76,8 +76,17 @@ if (cantidadDeArticulosJug1 > cantidadDeArticulosJug2) {
   contadorPuntosJug2++;
 }
 
-if (contadorPuntosJug1 > contadorPuntosJug2) {
-  console.log(" Felicitaciones " + jugadorUno.nombre + " ganaste el juego !!");
-} else {
-  console.log(" Felicitaciones " + jugadorDos.nombre + " ganaste el juego !!");
+if ( contadorPuntosJug1>contadorPuntosJug2){
+  let ganador= jugadorUno.nombre
+}else{
+ganador=jugadorDos.nombre
 }
+
+let resultado={
+  [contadorPuntosJug1]: jugadorUno.nombre,
+  [contadorPuntosJug2]:jugadorDos.nombre,
+  ganador: ganador
+}
+console.log(resultado);
+
+
